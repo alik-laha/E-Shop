@@ -9,4 +9,5 @@ router.get('/', getAllData);
 //send data
 router.post("/send", sendData);
 
+
 module.exports = router;

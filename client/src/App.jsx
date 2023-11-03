@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
      const[postPerPage,setPostPerPage]=useState(12)
      useEffect( ()=>{
          async function fetchData(){
-         await fetch("http://localhost:3000/api/products",{
+         await fetch(import.meta.env.VITE_API_URL,{
          })
              .then(res=>res.json())
              .then(json=>setData(json))

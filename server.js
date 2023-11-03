@@ -14,6 +14,6 @@ app.use('/api/products', productRouter);
 //middleware
 app.use(express.json());
 
-app.listen(process.env.Port, () => {
+app.listen(process.env.PORT, () => {
     console.log('Server is running on port 3000');
 })

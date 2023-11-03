@@ -88,7 +88,7 @@ const Body=({data,all,NextPage})=>{
                         )
                     })
                 }
-                <h3 style={{textAlign:"center" ,marginTop:"30px"}}>{filterSettings.price[0]} $</h3>
+                <h4 style={{textAlign:"center" ,marginTop:"30px"}}>{filterSettings.price[0]}$</h4>
                 <div style={{textAlign:"center"}}>
                 <input
                     type="range"
@@ -97,6 +97,7 @@ const Body=({data,all,NextPage})=>{
                     value={filterSettings.price[0]}
                     onChange={(e) => setFilterSettings({ ...filterSettings, price: [e.target.value, filterSettings.price[1]] })}
                 />
+                    <p style={{color:"red"}}>*this function is not applied</p>
                 </div>
             </Filter>
         </Contain>
