@@ -31,7 +31,7 @@ border-bottom: 1px solid #e9e9e9;
 `
 export const Menu = styled.div`
 margin-left: 3em;
-  cursor: default;
+  cursor: pointer;
 @media (max-width: 700px) {
     display:none;
   }

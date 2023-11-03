@@ -26,7 +26,6 @@ import {useEffect, useState} from "react";
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<><Nav/><Body data={item} page={currentpage} all={data} NextPage={NextPage}/></> } />
-                <Route path='/cart' element={<><Nav/><h2>cart</h2> </>} />
             </Routes>
         </BrowserRouter>
 

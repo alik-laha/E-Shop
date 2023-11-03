@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import {
     AddtoCart,
     Block,
@@ -13,8 +13,12 @@ import {
 import {Filter} from "../navbar/navStyle/container.styled.js";
 import Pagenation from "./pagenation/pagenation.jsx";
 
-const Body=({data,pages,all,NextPage})=>{
+const Body=({data,all,NextPage})=>{
     const[catagory,setCatagory]=useState("All")
+    const [filterSettings, setFilterSettings] = useState({
+        price: [0, 2000],
+    });
+
 
     let item
     let newval
@@ -50,7 +54,7 @@ const Body=({data,pages,all,NextPage})=>{
         <Contain width={"99vw"}display={"flex"} >
             <Contain width={"80vw"} display={"block"} >
             <Contain width={"80vw"}display={"grid"}margin={"12vh"} >
-            {/*<Wrapper></Wrapper>*/}
+
             {
                 product.map((shop,index)=>{
 
@@ -63,7 +67,7 @@ const Body=({data,pages,all,NextPage})=>{
                             <Titale>{shop.title.slice(0,35)}...</Titale>
                             <Price size={"1.1em"}>{shop.price}$</Price>
                             <Containing>
-                            <AddtoCart >Add to Cart</AddtoCart>
+                            <AddtoCart onClick={()=>console.log("cart funcation is not applied")} >Add to Cart</AddtoCart>
                             </Containing>
                         </Wrapper>
                     )
@@ -84,6 +88,16 @@ const Body=({data,pages,all,NextPage})=>{
                         )
                     })
                 }
+                <h3 style={{textAlign:"center" ,marginTop:"30px"}}>{filterSettings.price[0]} $</h3>
+                <div style={{textAlign:"center"}}>
+                <input
+                    type="range"
+                    min={0}
+                    max={2000}
+                    value={filterSettings.price[0]}
+                    onChange={(e) => setFilterSettings({ ...filterSettings, price: [e.target.value, filterSettings.price[1]] })}
+                />
+                </div>
             </Filter>
         </Contain>
         </div>

@@ -51,9 +51,9 @@ const Nav = () => {
         />
 
         <Right>
-            <Menu><NavLink to='/' style={{textDecoration:"none",color:"black"}}>Home</NavLink></Menu>
+            <Menu><NavLink to='/' style={{textDecoration:"none",color:"black",cursor:"pointer"}}>Home</NavLink></Menu>
           <Menu  onClick={handale}>Filter</Menu>
-          <Menu><NavLink to='/cart'style={{textDecoration:"none",color:"black"}}>Cart</NavLink></Menu>
+          <Menu onClick={()=>console.log("cart funcation is not applied")}>Cart</Menu>
         </Right>
           <Button display={"none"} backcolor={" #fff"} onClick={handaleClick}><HiMenu style={{fontSize:"25px"}}/></Button>
       </Element>
