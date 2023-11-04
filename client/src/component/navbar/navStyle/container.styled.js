@@ -80,5 +80,8 @@ export const Filter=styled.div`
   @media (max-width: 520px) {
    width: 100vw;
   }
+  @media (max-width: 700px) {
+    margin-top: 23vh;
+  }
 `
 

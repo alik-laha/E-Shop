@@ -23,11 +23,13 @@ const Nav = () => {
     }
     const handaleClick=()=>{
        const data=document.getElementById("float")
+        const float=document.getElementById("filter")
         if(data.style.display==="none"){
             data.style.display="block"
         }
         else{
             data.style.display="none";
+            float.style.display="none";
         }
     }
 
@@ -60,7 +62,7 @@ const Nav = () => {
         <Float id="float">
             <Menus><NavLink to='/' style={{textDecoration:"none",color:"black"}}>Home</NavLink></Menus>
             <Menus onClick={handale}>Filter</Menus>
-            <Menus><NavLink to='/cart'style={{textDecoration:"none",color:"black"}}>Cart</NavLink></Menus>
+            <Menus>Cart</Menus>
         </Float>
 
     </div>
